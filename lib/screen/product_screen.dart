@@ -99,7 +99,7 @@ class ProductScreen extends StatelessWidget {
                   height: 8,
                 ),
                 const Text(
-                  "For Women",
+                  "Dành Cho Nữ",
                   style: TextStyle(
                     color: Colors.black54,
                     fontSize: 16,
@@ -128,7 +128,7 @@ class ProductScreen extends StatelessWidget {
                   height: 20,
                 ),
                 const Text(
-                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+                  "Áo Sơ Mi Đen, đủ size, đủ mẫu mã",
                   style: TextStyle(
                     fontSize: 16,
                     color: Colors.black54,
@@ -161,7 +161,7 @@ class ProductScreen extends StatelessWidget {
                           backgroundColor: Colors.transparent,
                           context: context,
                           builder: (context){
-                            return const CustomBottomSheet();
+                            return CustomBottomSheet();
                           }
                         );
                       },
@@ -173,7 +173,7 @@ class ProductScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(30),
                         ),
                         child: Text(
-                          "Buy Now",
+                          "Mua Ngay",
                           style: TextStyle(
                             fontSize: 17,
                             fontWeight: FontWeight.w600,

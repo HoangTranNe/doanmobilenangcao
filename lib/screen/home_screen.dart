@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:main_project/widgets/product_card.dart';
 
 class HomeScreen extends StatelessWidget {
-  List catList = ["All", "Best Selling", "Jacket", "Shirts", "Pants", "Bags"];
+  List catList = ["Tất Cả", "Sản Phẩm Bán Chạy", "Áo Khoác", "Áo Thun", "Quần", "Balo"];
 
   List imgList = ["Black Pant", "Black T-Shirt", "Ladies Bag", "Warm Jacket"];
 
@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(10)),
                             child: TextFormField(
                                 decoration: const InputDecoration(
-                                    label: Text("Find your products"),
+                                    label: Text("Tìm kiếm sản phẩm"),
                                     border: InputBorder.none,
                                     prefixIcon: Icon(Icons.search,
                                         size: 30, color: Colors.grey)))),
@@ -61,7 +61,7 @@ class HomeScreen extends StatelessWidget {
                           padding: const EdgeInsets.symmetric(
                               vertical: 10, horizontal: 18),
                           decoration: BoxDecoration(
-                              color: catList[i] == "All"
+                              color: catList[i] == "Tất Cả"
                                   ? const Color(0xFFFD725A)
                                   : const Color(0xFFF7F8FA),
                               borderRadius: BorderRadius.circular(18)),
@@ -69,7 +69,7 @@ class HomeScreen extends StatelessWidget {
                             catList[i],
                             style: TextStyle(
                               fontSize: 16,
-                              color: catList[i] == "All"
+                              color: catList[i] == "Tất Cả"
                                   ? Colors.white
                                   : Colors.grey,
                             ),
