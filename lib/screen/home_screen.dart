@@ -3,7 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:main_project/widgets/product_card.dart';
 
 class HomeScreen extends StatelessWidget {
-  List catList = ["Tất Cả", "Sản Phẩm Bán Chạy", "Áo Khoác", "Áo Thun", "Quần", "Balo"];
+  List catList = [
+    "Tất Cả",
+    "Sản Phẩm Bán Chạy",
+    "Áo Khoác",
+    "Áo Thun",
+    "Quần",
+    "Balo"
+  ];
 
   List imgList = ["Black Pant", "Black T-Shirt", "Ladies Bag", "Warm Jacket"];
 
@@ -18,37 +25,45 @@ class HomeScreen extends StatelessWidget {
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.start, children: [
               Padding(
-                  padding: const EdgeInsets.only(right: 25),
-                  child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                            width: MediaQuery.of(context).size.width / 1.5,
-                            decoration: BoxDecoration(
-                                color: const Color(0xFFF7F8Fa),
-                                borderRadius: BorderRadius.circular(10)),
-                            child: TextFormField(
-                                decoration: const InputDecoration(
-                                    label: Text("Tìm kiếm sản phẩm"),
-                                    border: InputBorder.none,
-                                    prefixIcon: Icon(Icons.search,
-                                        size: 30, color: Colors.grey)))),
-                        Container(
-                            padding: const EdgeInsets.all(10),
-                            decoration: BoxDecoration(
-                                color: const Color(0xFFF7F8Fa),
-                                borderRadius: BorderRadius.circular(10)),
-                            child: const Icon(Icons.notifications_none,
-                                size: 30, color: Colors.grey))
-                      ])),
+                padding: const EdgeInsets.only(right: 25),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      width: MediaQuery.of(context).size.width / 1.5,
+                      decoration: BoxDecoration(
+                          color: const Color(0xFFF7F8Fa),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: TextFormField(
+                        decoration: const InputDecoration(
+                          label: Text("Tìm kiếm sản phẩm"),
+                          border: InputBorder.none,
+                          prefixIcon:
+                              Icon(Icons.search, size: 30, color: Colors.grey),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                          color: const Color(0xFFF7F8Fa),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: const Icon(Icons.notifications_none,
+                          size: 30, color: Colors.grey),
+                    ),
+                  ],
+                ),
+              ),
               Container(
-                  margin: const EdgeInsets.only(right: 25, top: 20),
-                  alignment: Alignment.center,
-                  child: ClipRRect(
-                      borderRadius: BorderRadius.circular(30),
-                      child: Image.asset("images/cover.jpg",
-                          width: MediaQuery.of(context).size.width / 1.2,
-                          fit: BoxFit.contain))),
+                margin: const EdgeInsets.only(right: 25, top: 20),
+                alignment: Alignment.center,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(30),
+                  child: Image.asset("images/cover.jpg",
+                      width: MediaQuery.of(context).size.width / 1.2,
+                      fit: BoxFit.contain),
+                ),
+              ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Padding(
@@ -80,48 +95,48 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               GridView.builder(
-                physics: const NeverScrollableScrollPhysics(),
-                shrinkWrap: true ,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  childAspectRatio:
-                      (MediaQuery.of(context).size.width - 30 - 15) / (2 * 290),
-                  mainAxisSpacing: 45,
-                  crossAxisSpacing: 15,
-                ),
-                itemCount: imgList.length,
-                itemBuilder: (_,i){
-                  if(i%2==0){
-                    return ProductCard(imgList[i]);
-                  }
-                  return OverflowBox(
-                    maxHeight: 290.0 + 70.0,
-                    child: Container(
-                      margin: const EdgeInsets.only(top:70),
-                      child: ProductCard(imgList[i]),
-                    ),
-                  );
-                }
-              )
+                  physics: const NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    childAspectRatio:
+                        (MediaQuery.of(context).size.width - 30 - 15) /
+                            (2 * 290),
+                    mainAxisSpacing: 45,
+                    crossAxisSpacing: 15,
+                  ),
+                  itemCount: imgList.length,
+                  itemBuilder: (_, i) {
+                    if (i % 2 == 0) {
+                      return ProductCard(imgList[i]);
+                    }
+                    return OverflowBox(
+                      maxHeight: 290.0 + 70.0,
+                      child: Container(
+                        margin: const EdgeInsets.only(top: 70),
+                        child: ProductCard(imgList[i]),
+                      ),
+                    );
+                  })
             ]),
           ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.white,
-        iconSize: 30,
-        selectedItemColor: const Color(0xFFFD725A),
-        unselectedItemColor: Colors.grey,
-        currentIndex: 0,
-        onTap: (index){},
-        type: BottomNavigationBarType.fixed,
-        items:const [
-          BottomNavigationBarItem(icon: Icon(Icons.home),label: ''),
-          BottomNavigationBarItem(icon: Icon(CupertinoIcons.cart_fill) ,label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.favorite),label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.person),label: ''),
-        ]
-      ),
+          backgroundColor: Colors.white,
+          iconSize: 30,
+          selectedItemColor: const Color(0xFFFD725A),
+          unselectedItemColor: Colors.grey,
+          currentIndex: 0,
+          onTap: (index) {},
+          type: BottomNavigationBarType.fixed,
+          items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
+            BottomNavigationBarItem(
+                icon: Icon(CupertinoIcons.cart_fill), label: ''),
+            BottomNavigationBarItem(icon: Icon(Icons.favorite), label: ''),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
+          ]),
     );
   }
 }

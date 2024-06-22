@@ -97,7 +97,7 @@ class CustomBottomSheet extends StatelessWidget {
           Row(
             children: [
               const Text(
-                "Total",
+                "Tổng Tiền",
                 style: TextStyle(
                   fontSize:17,
                   fontWeight: FontWeight.w500,
@@ -132,7 +132,7 @@ class CustomBottomSheet extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: const Icon(
-                  CupertinoIcons.minus,
+                  CupertinoIcons.plus,
                   size:18,
                   color: Colors.redAccent,
                 ),
@@ -164,7 +164,7 @@ class CustomBottomSheet extends StatelessWidget {
           InkWell(
             onTap: () {
               Navigator.push(context, MaterialPageRoute(
-                builder: (context) => CartScreen(),
+                builder: (context) => const CartScreen(),
               ));
             },
             child: Container(
