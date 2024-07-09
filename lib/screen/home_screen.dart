@@ -1,9 +1,19 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
+
 import 'package:main_project/widgets/product_card.dart';
 
-class HomeScreen extends StatelessWidget {
-  List catList = [
+class HomeScreen extends StatefulWidget {
+
+
+  const HomeScreen({super.key});
+
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+    List catList = [
     "Tất Cả",
     "Sản Phẩm Bán Chạy",
     "Áo Khoác",
@@ -14,7 +24,8 @@ class HomeScreen extends StatelessWidget {
 
   List imgList = ["Black Pant", "Black T-Shirt", "Ladies Bag", "Warm Jacket"];
 
-  HomeScreen({super.key});
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -121,22 +132,9 @@ class HomeScreen extends StatelessWidget {
             ]),
           ),
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.white,
-          iconSize: 30,
-          selectedItemColor: const Color(0xFFFD725A),
-          unselectedItemColor: Colors.grey,
-          currentIndex: 0,
-          onTap: (index) {},
-          type: BottomNavigationBarType.fixed,
-          items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-            BottomNavigationBarItem(
-                icon: Icon(CupertinoIcons.cart_fill), label: ''),
-            BottomNavigationBarItem(icon: Icon(Icons.favorite), label: ''),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
-          ]),
+      ),    
+      
+      
     );
   }
 }

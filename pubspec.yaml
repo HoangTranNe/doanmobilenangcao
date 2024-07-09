@@ -12,14 +12,32 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   flutter_rating_bar: ^4.0.1
+  provider: ^6.1.2
+  shared_preferences: ^2.2.3
+  line_awesome_flutter: ^2.0.0
+  flutter_screenuntil: ^1.0.2
+  animated_theme_switcher: ^1.0.5
     
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.0
+  flutter_lints: ^4.0.0
 
 flutter:
   uses-material-design: true
   assets:
   -  images/
+  fonts:
+  - family: SFProText
+  - fonts: 
+    - asset: fonts/SFProText-Regular.ttf
+    - asset: fonts/SFProText-Bold.ttf
+    - asset: fonts/SFProText-Medium.ttf
+    - asset: fonts/SFProText-Semibold.ttf
+    - asset: fonts/SFProText-Light.ttf
+    - asset: fonts/SFProText-Thin.ttf
+    - asset: fonts/SFProText-Ultralight.ttf
+    - asset: fonts/SFProText-Black.ttf
+    - asset: fonts/SFProText-Heavy.ttf
+
