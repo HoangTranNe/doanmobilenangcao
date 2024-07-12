@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:main_project/constants.dart';
 import 'package:main_project/screen/home_screen.dart';
 import 'package:main_project/screen/cart_screen.dart';
 import 'package:main_project/screen/favorite_screen.dart';
@@ -36,6 +37,9 @@ class _MainAppState extends State<MainApp> {
     
     return MaterialApp(
       debugShowCheckedModeBanner: false,      
+      theme: kDarkTheme,
+      darkTheme: kLightTheme,
+      themeMode: themeNotifier.value,
       home: Scaffold(
         body: Center(
           child: pages[currentPageIndex],

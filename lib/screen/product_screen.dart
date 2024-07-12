@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -8,8 +10,7 @@ class ProductScreen extends StatelessWidget {
   ProductScreen(this.img, {super.key});
 
   @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
+  Widget build(BuildContext context) {    
     return Scaffold(
       body: SafeArea(
           child: Column(
