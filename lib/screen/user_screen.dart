@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
-import 'package:main_project/constants.dart';
+import 'package:main_project/conf/constants.dart';
 
 class UserScreen extends StatelessWidget {
   const UserScreen({super.key});

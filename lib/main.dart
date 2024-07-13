@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:main_project/constants.dart';
+import 'package:main_project/conf/constants.dart';
 import 'package:main_project/screen/home_screen.dart';
 import 'package:main_project/screen/cart_screen.dart';
 import 'package:main_project/screen/favorite_screen.dart';

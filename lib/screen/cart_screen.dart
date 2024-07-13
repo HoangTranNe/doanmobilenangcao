@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:main_project/screen/payment_func.dart';
 import 'package:main_project/widgets/cart_item_samples.dart';
 
 class CartScreen extends StatelessWidget {
@@ -127,7 +128,15 @@ class CartScreen extends StatelessWidget {
                     height: 30,
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              const PaymentFunc(), // Pass the PaymentFunc widget
+                        ),
+                      );
+                    },
                     child: Container(
                       padding: const EdgeInsets.symmetric(
                           vertical: 20, horizontal: 130),
